@@ -1,0 +1,23 @@
+{
+  "name": "@kuyoonjo/iptables-util",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yu Chen",
+    "email": "yu@chen.news",
+    "url": "https://yu.chen.news"
+  },
+  "main": "lib/index",
+  "types": "lib/index",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc --pretty"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "16",
+    "typescript": "^5.1.6"
+  }
+}
