@@ -93,7 +93,11 @@ export class Iptables {
   }
 
   public addRuleAtFront(chainName: string, content: string) {
-    const i = this._rules[0].lineIndex;
+    const i = (() => {
+      if (this._rules.length)
+        return this._rules[0].lineIndex;
+      return this._commitLineIndex;
+    })();
     const rule = new Rule(chainName, i, content);
     for (const r of this._rules) {
       r['_lineIndex']++;
